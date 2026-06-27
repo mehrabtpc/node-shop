@@ -1,15 +1,15 @@
-import express from "express";
-import {
-  getDashboardStats,
-  getAllOrders,
-  updateOrderStatus,
-} from "../controllers/admin.controller.js";
-import { protect, adminOnly } from "../middlewares/auth.middleware.js";
+// import express from "express";
+// import {
+//   getDashboardStats,
+//   getAllOrders,
+//   updateOrderStatus,
+// } from "../controllers/admin.controller.js";
+// import { protect, adminOnly } from "../middlewares/auth.middleware.js";
 
-const router = express.Router();
+// const router = express.Router();
 
-router.get("/stats", protect, adminOnly, getDashboardStats);
-router.get("/orders", protect, adminOnly, getAllOrders);
-router.put("/orders/:id", protect, adminOnly, updateOrderStatus);
+// router.get("/stats", protect, adminOnly, getDashboardStats);
+// router.get("/orders", protect, adminOnly, getAllOrders);
+// router.put("/orders/:id", protect, adminOnly, updateOrderStatus);
 
-export default router;
+// export default router;
