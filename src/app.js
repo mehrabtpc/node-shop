@@ -8,7 +8,6 @@ import cartRoutes from "./routes/front/cart.routes.js";
 import orderRoutes from "./routes/customer/order.routes.js";
 import adminRoutes from "./routes/admin/admin.routes.js";
 import authRoutes from "./routes/admin/auth.routes.js";
-import dotenv from "dotenv";
 
 const app = express();
 
@@ -22,14 +21,18 @@ app.use("/api/cart", cartRoutes);
 app.use("/api/orders", orderRoutes);
 app.use("/api/admin", adminRoutes);
 app.use("/api/auth", authRoutes);
-dotenv.config();
 
 app.get("/", (req, res) => {
-
-  console.log(process.env.JWT_SECRET);
-
   res.send("API is running...");
 });
 
+app.use((req, res, next) => {
+  return res.status(404).json({
+    error: {
+      type: "Not Found",
+      message: "404 test msg",
+    },
+  });
+});
 
 export default app;
