@@ -24,7 +24,7 @@ import {
   createOrder,
   getMyOrders,
   getMyOrderById
-} from "../controllers/order.controller.js";
+} from "../controllers/customer/order.controller.js";
 import { protect } from "../middlewares/auth.middleware.js";
 
 const router = express.Router();
