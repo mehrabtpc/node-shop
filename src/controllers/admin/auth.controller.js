@@ -12,7 +12,7 @@ export const registerAdmin = async (req, res) => {
 
     const userExists = await User.findOne({ email });
     if (userExists) {
-      return res.status(400).json({ message: "کاربر قبلاً وجود دارد" });
+      return res.status(400).json({ message: "کاربر وجود دارد" });
     }
 
     const hashedPassword = await bcrypt.hash(password, 10);
