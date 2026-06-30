@@ -7,19 +7,28 @@ const userSchema = new mongoose.Schema(
       required: true,
       trim: true
     },
+
     username: {
       type: String,
       required: true,
-      trim: true
+      trim: true,
+      unique: true
     },
-    age:{
-      type:String,
-      required:true,
+
+    age: {
+      type: Number,
+      required: true
     },
+
     email: {
       type: String,
       required: true,
       unique: true,
+      trim: true
+    },
+
+    phone: {
+      type: String,
       trim: true
     },
 
@@ -28,11 +37,11 @@ const userSchema = new mongoose.Schema(
       required: true
     },
 
-    // role: {
-    //   type: String,
-    //   enum: ["user", "admin"],
-    //   default: "user"
-    // }
+    role: {
+      type: String,
+      enum: ["user", "admin"],
+      default: "user"
+    }
   },
   {
     timestamps: true

@@ -5,7 +5,7 @@ import {
   show,
   update,
   destroy
-} from "../controllers/admin/admin.controller.js";
+} from "../../controllers/admin/admin.controller.js";
 
 const router = express.Router();
 

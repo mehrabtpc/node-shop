@@ -23,7 +23,7 @@ import {
   getProducts,
   getProductBySlug,
   getRelatedProducts
-} from "../controllers/front/product.controller.js";
+} from "../../controllers/front/product.controller.js";
 
 const router = express.Router();
 

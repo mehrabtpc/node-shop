@@ -20,7 +20,7 @@ import {
   getCategories,
   getCategoryBySlug,
   getCategoryProducts
-} from "../controllers/front/category.controller.js";
+} from "../../controllers/front/category.controller.js";
 
 const router = express.Router();
 
