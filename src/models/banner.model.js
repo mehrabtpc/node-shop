@@ -1,14 +1,24 @@
 import mongoose from "mongoose";
 
-const brandSchema = new mongoose.Schema(
+const bannerSchema = new mongoose.Schema(
   {
-    name: { type: String, required: true, trim: true },
-    slug: { type: String, required: true, unique: true, trim: true, index: true },
+    title: { type: String, required: true, trim: true },
     image: { type: String, required: true },
-    status: { type: String, enum: ["active", "inactive"], default: "active", index: true }
+    link: { type: String, default: null },
+    position: {
+      type: String,
+      enum: ["home_top", "home_middle", "home_bottom"],
+      default: "home_top"
+    },
+    status: {
+      type: String,
+      enum: ["active", "inactive"],
+      default: "active",
+      index: true
+    }
   },
   { timestamps: true }
 );
 
-const Brand = mongoose.model("Brand", brandSchema);
-export default Brand;
+const Banner = mongoose.model("Banner", bannerSchema);
+export default Banner;
