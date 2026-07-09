@@ -7,7 +7,7 @@ import {
   deleteProduct
 } from "../../controllers/admin/product.controller.js";
 
-import { protect, adminOnly } from "../../middlewares/authMiddleware.js";
+import { protect, adminOnly } from "../../middlewares/auth.middleware.js";
 
 const router = express.Router();
 

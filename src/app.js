@@ -19,6 +19,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
+
 app.use("/api/customer/users", customerUserRoutes);
 app.use("/api/front/categories", frontCategoryRoutes);
 app.use("/api/front/products", frontProductRoutes);
@@ -35,6 +36,7 @@ app.use("/api/admin/product-categories", productCategoryRoutes);
 app.get("/", (req, res) => {
   res.send("API is running...");
 });
+
 
 app.use((req, res, next) => {
   return res.status(404).json({

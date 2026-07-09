@@ -7,7 +7,8 @@ import {
   destroy
 } from "../../controllers/admin/post.controller.js";
 
-import { protect, adminOnly } from "../../middlewares/authMiddleware.js";
+
+import { protect, adminOnly } from "../../middlewares/auth.middleware.js";
 
 const router = express.Router();
 

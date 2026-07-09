@@ -6,7 +6,7 @@ import {
   update,
   destroy
 } from "../../controllers/admin/story.controller.js";
-import { protect, adminOnly } from "../../middlewares/authMiddleware.js";
+import { protect, adminOnly } from "../../middlewares/auth.middleware.js";
 
 const router = express.Router();
 
