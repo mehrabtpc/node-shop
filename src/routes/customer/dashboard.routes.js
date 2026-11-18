@@ -3,10 +3,10 @@ import { protect, adminOnly } from "../../middlewares/auth.middleware.js";
 
 const router = express.Router();
 
-export const adminDashboard = async (req, res) => {
+export const customerDashboard = async (req, res) => {
   res.json({ message: "i'm customer" });
 };
 
-router.get("/", protect, adminDashboard);
+router.get("/", protect, customerDashboard);
 
 export default router;

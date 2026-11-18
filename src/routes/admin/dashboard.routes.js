@@ -1,12 +1,10 @@
 import express from "express";
 import { protect, adminOnly } from "../../middlewares/auth.middleware.js";
+import { dashboard } from "../../controllers/admin/dashboard.controller.js";
 
 const router = express.Router();
 
-export const adminDashboard = async (req, res) => {
-  res.json({ message: "i'm admin" });
-};
 
-router.get("/", protect, adminOnly, adminDashboard);
+router.get("/", protect, adminOnly, dashboard);
 
 export default router;
